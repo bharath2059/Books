@@ -18,6 +18,7 @@ const Login = () => {
                 <div>
                     <a href="#">Forgot password?</a>
                 </div>
+                <br/>
             </view>
         </div>
     );

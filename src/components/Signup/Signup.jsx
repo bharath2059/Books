@@ -14,6 +14,7 @@ const Signup = () => {
             <div>
                 <a href="#">Already have an account?</a>
             </div>
+            <br/>
         </div >
     );
 };

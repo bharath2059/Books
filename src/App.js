@@ -7,10 +7,11 @@ function App() {
   return (
     <>
 
-<Login/>
+      <Login/>
+      <Signup />
 
     </>
-    
+
   );
 }
 
