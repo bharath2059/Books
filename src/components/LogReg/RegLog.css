@@ -1,0 +1,88 @@
+.container{
+       width: 100%;
+       height: 100vh;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       background-color: #FA8BFF;
+       background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+}
+.hey{
+       width: 350px;
+       border-radius: 30px;
+       overflow: hidden;
+       box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
+}
+.contet{
+       width: 700px;
+       height: 520px;
+       border-radius: 30px;
+       display: flex;
+       flex-direction: row;
+       transform: translateX(0%);
+}
+.Logs,.Reg{
+       width: 350px;
+       height: 520px;
+}
+.Logs .mainCont, .Reg .mainCont{
+       width: 100%;
+       height: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-direction: column;
+}
+.mainCont form{
+       width: 100%;
+       height: 40%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-direction: column;
+}
+.mainCont h2{
+       margin-bottom: 50px;
+}
+.mainCont form input {
+       width: 90%;
+       margin: 10px 0;
+       outline: none;
+       border: none;
+       padding: 5px;
+       border-bottom: 2px solid #555;
+       background-color: transparent;
+}
+#log{
+       border-radius: 0%;
+       cursor: pointer;
+       border-bottom: none;
+}
+button{
+       width: 90%;
+       padding: 7px 0;
+       cursor: pointer;
+       border: none;
+       background-color: aqua;
+       margin-top: -20px;
+}
+a{
+       margin-top: 20px;
+}
+form .show{
+       background-color: #555;
+       color: #fff;
+       position: absolute;
+       transform: translateX(300%);
+       padding: 3px;
+       border-radius: 10px;
+       cursor: pointer;
+       margin-bottom: 20px;
+}
+
+.Reg .mainCont form{
+       height: auto;
+}
+.Reg button{
+       margin-top: 0%;
+}
