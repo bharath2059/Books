@@ -1,4 +1,4 @@
-import "./Login.css";
+/* import "./Login.css";
 
 const Login = () => {
     return (
@@ -25,4 +25,4 @@ const Login = () => {
 }
 
 
-export default Login;
+export default Login; */
