@@ -1,26 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { SafeAreaView, StyleSheet, Text, View, Platform, StatusBar } from 'react-native';
+import CreateAdPage from './src/screens/createadpage';
 
-import Homepage from './src/screens/Homepage';
+
 
 export default function App() {
   return (
-    <View style = {styles.container}>
-      <Homepage></Homepage>
+    <SafeAreaView style =  {styles.AndroidSafeArea}>
+     
+      <CreateAdPage></CreateAdPage>
 
       
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container : {
     flex : 1,
-    justifyContent : 'center',
-    alignItems : 'center',
+    //justifyContent : 'center',
+    //alignItems : 'center',
     
+  },
+  AndroidSafeArea: {
+    flex: 1,
+    backgroundColor: "white",
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
   }
 
 })
+
 
 
