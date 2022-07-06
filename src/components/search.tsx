@@ -44,25 +44,26 @@ const Search = () =>{
 const styles = StyleSheet.create({
     Wrapper :{
         flex : 1,
-        marginBottom : 10,
+       // marginBottom : 10,
         width : '100%',
         alignItems : 'center',
         backgroundColor : '#E8E8FF'      
     },
     box1 : {
         height : "50%",
-        width : "50%",
-        backgroundColor : '#586B87', 
+        width : "100%",
+        flex : 3,
+        //backgroundColor : '#586B87', 
        // marginRight : 10,
         marginBottom : 10,
-        marginLeft : 50,
+        //marginLeft : 50,
         padding : 50,
 
     },
     textInputStyle :{
         height : 50,
         width : 300,
-        marginLeft : 185,
+       // marginLeft : 185,
         backgroundColor : '#D9D9D9',
         marginBottom : 20
     },
@@ -75,9 +76,11 @@ const styles = StyleSheet.create({
     buttonStyle : {
         backgroundColor : '#F97777',
         height : 65,
-        width : 110,
+        width : "70%",
         alignSelf : 'center',
-        marginBottom : 20
+        marginBottom : 20,
+        position : 'relative',
+        top : 400
     },
     buttonTextStyle : {
         fontSize : 30,
@@ -99,7 +102,7 @@ const styles = StyleSheet.create({
         backgroundColor : '#595959',
         flex : 0.3,
         flexDirection : 'row',
-        marginBottom : 20
+       // marginBottom : 20
         
         
     },
