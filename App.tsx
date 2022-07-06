@@ -1,5 +1,4 @@
 
-
 import React from 'react';
 import { SafeAreaView, StyleSheet, Text, View, Platform, StatusBar } from 'react-native';
 import CreateAdPage from './src/screens/createadpage';
@@ -46,10 +45,17 @@ import Search from './src/components/search';
 
 
 
+
 export default function App() {
   return (
     <SafeAreaView style =  {styles.AndroidSafeArea}>
      
+
+      <CreateAdPage></CreateAdPage>
+
+      
+    </SafeAreaView>
+
       <Search></Search>
 
       
@@ -75,6 +81,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "white",
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
+
+
   container : {
     flex : 1,
     justifyContent : 'center',
@@ -195,5 +203,4 @@ const styles = StyleSheet.create({
   }
 
 })
-
 
