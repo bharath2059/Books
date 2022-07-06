@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, Text, View, Platform, StatusBar } from 'react-native';
-import CreateAdPage from './src/screens/createadpage';
+import Search from './src/components/search';
 
 
 
@@ -8,7 +8,7 @@ export default function App() {
   return (
     <SafeAreaView style =  {styles.AndroidSafeArea}>
      
-      <CreateAdPage></CreateAdPage>
+      <Search></Search>
 
       
     </SafeAreaView>
@@ -16,12 +16,7 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container : {
-    flex : 1,
-    //justifyContent : 'center',
-    //alignItems : 'center',
-    
-  },
+  // Safe Area View for Andriod.
   AndroidSafeArea: {
     flex: 1,
     backgroundColor: "white",
