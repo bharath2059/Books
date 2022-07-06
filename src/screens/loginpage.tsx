@@ -1,12 +1,16 @@
 import React from "react";
 import { useState } from "react";
+
 import { SafeAreaView, StyleSheet, Text, View, TextInput, TouchableOpacity, Alert } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View, TextInput, TouchableOpacity, Alert,Image } from 'react-native';
 
 const CreateLoginPage = () => {
     const [Email, setEmail] = useState('')
     const [Password, setPassword] = useState('')
     return (
         <SafeAreaView style={styles.Wrapper}>
+
+            <Image source={require('./../Assets/logo.jpeg')} style={styles.imageStyle} />
             <View style={styles.box1}>
                 <Text style={styles.HeadingText}>Login</Text>
                 
@@ -36,7 +40,11 @@ const CreateLoginPage = () => {
 const styles = StyleSheet.create({
     Wrapper: {
         flex: 1,
+
         paddingTop:170,
+
+        paddingTop:80,
+
         backgroundColor: '#E8E8FF',
     },
     HeadingText: {
@@ -45,9 +53,23 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
 
+
+    
+    imageStyle: {
+        height: 200,
+        width: 200,
+        left: 105,
+        bottom: 40,
+        alignItems:'center',
+    },
+
+
     box1: {
         flex: 3,
     },
+
+
+
     link:{
         marginTop:40,
         fontSize: 20,
@@ -69,7 +91,10 @@ const styles = StyleSheet.create({
         width: 250,
         backgroundColor: '#D9D9D9',
         marginBottom: 0,
+
         marginTop:100,
+        marginTop:80,
+
         marginLeft:80,
         borderRadius:10
 
