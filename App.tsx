@@ -11,7 +11,7 @@ export default function App() {
     <SafeAreaView style =  {styles.AndroidSafeArea}>
     
      
-      <CreateSignupPage/>
+      <CreateLoginPage/>
       
 
       
