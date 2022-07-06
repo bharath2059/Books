@@ -1,3 +1,20 @@
+
+import logo from './logo.svg';
+import './App.css';
+import Signup from './components/Signup/Signup';
+import Login from './components/Login/Login';
+
+function App() {
+  return (
+    <>
+
+<Login/>
+
+    </>
+    
+  );
+}
+
 import React from 'react';
 import './App.css'
 import { Route,Routes, Switch } from 'react-router-dom';
@@ -14,5 +31,6 @@ const App = () => {
     </div>
   );
 };
+
 
 export default App;
