@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { SafeAreaView, StyleSheet, Text, View, TextInput, TouchableOpacity, Alert } from 'react-native';
 
-const CreateSignupPage = () => {
+const CreateSignupPage = ({navigation}) => {
     const [Name, setName] = useState('')
     const [Email, setEmail] = useState('')
     const [Password, setPassword] = useState('')
@@ -10,9 +10,9 @@ const CreateSignupPage = () => {
     return (
         <SafeAreaView style={styles.Wrapper}>
             <View style={styles.box1}>
-                <Text style={styles.HeadingText}>Create An Account</Text>
+                <Text style={styles.HeadingText}>SignUp</Text>
 
-                <View style={styles.textInputStyle2}>
+                <View style={styles.textInputStyle}>
                     <TextInput style={styles.InputTextStyle}
                         onChangeText={setName}
                         value={Name}
@@ -26,25 +26,28 @@ const CreateSignupPage = () => {
                         placeholder='Emailid' />
                 </View>
 
-                <View style={styles.textInputStyle1}>
+                <View style={styles.textInputStyle}>
                     <TextInput style={styles.InputTextStyle}
                         onChangeText={setPassword}
                         value={Password}
                         placeholder='Password' />
                 </View>
 
-                <View style={styles.textInputStyle1}>
+                <View style={styles.textInputStyle}>
                     <TextInput style={styles.InputTextStyle}
                         onChangeText={setconPassword}
                         value={ConfirmPassword}
                         placeholder='ConfirmPassword' />
                 </View>
 
-                <TouchableOpacity style={styles.buttonStyle}>
+                <TouchableOpacity style={styles.buttonStyle}
+                onPress ={()=>{navigation.push('LoginPage')}}>
                     <Text style={styles.buttonTextStyle}>Signup</Text>
                 </TouchableOpacity>
 
-                <Text style={styles.link}>Already have an account...?</Text>
+                <Text style={styles.link} 
+                onPress ={()=>{navigation.push('LoginPage')}}>
+                    Already have an account...?</Text>
             </View>
         </SafeAreaView>
     )
@@ -63,10 +66,12 @@ const styles = StyleSheet.create({
     },
 
     box1: {
-        flex: 3,
+        position : 'relative',
+        top : 80,
+        alignItems : 'center'
     },
     link:{
-        marginTop:40,
+        marginTop:70,
         fontSize: 20,
         fontWeight: 'bold',
         textAlign: 'center',
@@ -74,15 +79,16 @@ const styles = StyleSheet.create({
     },
 
     textInputStyle: {
-        height: 40,
-        width: 250,
+        height: 50,
+        width: '80%',
         backgroundColor: '#D9D9D9',
-        marginBottom: 0,
-        marginTop:30,
-        marginLeft:80,
-        borderRadius:10
+        marginBottom: 20,
+        alignItems : 'center',
+        borderRadius:10,
+        position : 'relative',
+        top : 40
     },
-    textInputStyle2: {
+    /*textInputStyle2: {
         height: 40,
         width: 250,
         backgroundColor: '#D9D9D9',
@@ -90,33 +96,35 @@ const styles = StyleSheet.create({
         marginTop:100,
         marginLeft:80,
         borderRadius:10
-    },
+    },*/
 
-    textInputStyle1: {
+    /*textInputStyle1: {
         height: 40,
         width: 250,
         backgroundColor: '#D9D9D9',
         marginBottom: 0,
         marginTop:30,
         marginLeft:80,
-        borderRadius:10
+        borderRadius:10 
 
-    },
+    },*/
     InputTextStyle: {
         position: 'relative',
         top: 5,
         fontSize: 18,
         marginLeft: 5,
+        textAlign : 'center'
 
     },
     buttonStyle: {
         backgroundColor: '#F97777',
         height: 45,
-        width: 100,
-        marginBottom: 20,
-        marginLeft:150,
+        width: '70%',
+        //marginBottom: 20,
+        //marginLeft:150,
         borderRadius:10,
-        marginTop:60,
+        marginTop:80,
+        alignItems :'center'
     },
     buttonTextStyle: {
         fontSize: 25,

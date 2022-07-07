@@ -59,20 +59,7 @@ const CreateAdPage = () =>{
                 <Text style={styles.buttonTextStyle}>PostAd</Text>
             </TouchableOpacity> 
             </View> 
-            <View style = {styles.box3}>
-                <View style = {styles.HomeLabelStyle}>
-                    <Text style ={styles.LabelTextStyle} onPress = {() => { alert!('Home')}}>Home</Text>
-                </View>
-                <View style = {styles.HomeLabelStyle}>
-                    <Text style = {styles.LabelTextStyle}>Search</Text>
-                </View>
-                <View style = {styles.HomeLabelStyle}>
-                    <Text style ={ styles.LabelTextStyle}>PostAd</Text>
-                </View>
-                <View style = {styles.HomeLabelStyle}>
-                    <Text style = {styles.LabelTextStyle}>Profile</Text>
-                </View>
-            </View>
+            
            
         </SafeAreaView>
     )
@@ -83,7 +70,8 @@ const styles = StyleSheet.create({
         flex : 1,
         width : '100%',
         alignItems : 'center',
-        backgroundColor : '#E8E8FF'      
+        backgroundColor : '#E8E8FF',
+        marginTop : 20     
     },
     box1 : {
         flex : 3
@@ -93,7 +81,8 @@ const styles = StyleSheet.create({
         height : 50,
         width : 300,
         backgroundColor : '#D9D9D9',
-        marginBottom : 20
+        marginBottom : 20,
+        borderRadius : 20
     },
     InputTextStyle : {
         position : 'relative',
@@ -106,7 +95,10 @@ const styles = StyleSheet.create({
         height : 80,
         width : 300,
         alignSelf : 'center',
-        marginBottom : 20
+        marginBottom : 20,
+        borderRadius : 20,
+        position : 'relative',
+        right : 10
     },
     buttonTextStyle : {
         fontSize : 30,
@@ -143,7 +135,8 @@ const styles = StyleSheet.create({
         height : 100,
         Width : 300,
         backgroundColor : '#D9D9D9',
-        marginBottom : 20
+        marginBottom : 20,
+        borderRadius : 20
     }
 })
 export default CreateAdPage;

@@ -1,10 +1,13 @@
+import { useNavigation } from "@react-navigation/native";
+import { NavigationContainer} from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from "react";
 import { useState } from "react";
 
-import { SafeAreaView, StyleSheet, Text, View, TextInput, TouchableOpacity, Alert } from 'react-native';
-import { SafeAreaView, StyleSheet, Text, View, TextInput, TouchableOpacity, Alert,Image } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View, TextInput, TouchableOpacity, Image} from 'react-native';
 
-const CreateLoginPage = () => {
+
+const CreateLoginPage = ({navigation}) => {
     const [Email, setEmail] = useState('')
     const [Password, setPassword] = useState('')
     return (
@@ -27,10 +30,10 @@ const CreateLoginPage = () => {
                         value={Password}
                         placeholder='Enter your Password' />
                 </View>
-                <TouchableOpacity style={styles.buttonStyle}>
+                <TouchableOpacity style={styles.buttonStyle} onPress ={()=>{navigation.push('Homepage')}}>
                     <Text style={styles.buttonTextStyle}>Login</Text>
                 </TouchableOpacity>
-                <Text style={styles.link}>Don't have an account?</Text>
+                <Text style={styles.link} onPress ={()=>{navigation.push('SignUp')}}>Don't have an account?</Text>
                 <Text style={styles.link1}>Forgot Pasword?</Text>
             </View>
         </SafeAreaView>
@@ -43,14 +46,15 @@ const styles = StyleSheet.create({
 
         paddingTop:170,
 
-        paddingTop:80,
+        
 
         backgroundColor: '#E8E8FF',
     },
     HeadingText: {
         fontSize: 40,
         fontWeight: 'bold',
-        textAlign: 'center'
+        textAlign: 'center',
+        marginTop : 40
     },
 
 
@@ -59,8 +63,10 @@ const styles = StyleSheet.create({
         height: 200,
         width: 200,
         left: 105,
-        bottom: 40,
+        //bottom: 40,
         alignItems:'center',
+        position : 'relative',
+        top : 30
     },
 
 
@@ -92,8 +98,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#D9D9D9',
         marginBottom: 0,
 
-        marginTop:100,
-        marginTop:80,
+        marginTop:30,
+        
 
         marginLeft:80,
         borderRadius:10
@@ -119,16 +125,20 @@ const styles = StyleSheet.create({
     buttonStyle: {
         backgroundColor: '#F97777',
         height: 45,
-        width: 80,
+        width: 200,
         marginBottom: 20,
-        marginLeft:165,
+       // marginLeft:165,
         borderRadius:10,
         marginTop:60,
+        alignSelf : 'center',
+        justifyContent : 'center'
+
     },
     buttonTextStyle: {
         fontSize: 25,
         textAlign: 'center',
         position: 'relative',
+        
 
     },
 },
