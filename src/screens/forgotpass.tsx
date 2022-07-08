@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { SafeAreaView, StyleSheet, Text, View, TextInput, TouchableOpacity, Alert, Image } from 'react-native';
 
-const Forgotpass = () => {
+const Forgotpass = ({navigation}) => {
     const [Email, setEmail] = useState('')
     return (
         <SafeAreaView style={styles.Wrapper}>
@@ -17,7 +17,7 @@ const Forgotpass = () => {
                 </View>
 
                 <TouchableOpacity style={styles.buttonStyle}>
-                    <Text style={styles.buttonTextStyle}>Send</Text>
+                    <Text style={styles.buttonTextStyle} onPress={()=>{navigation.navigate('LoginPage')}}>Send</Text>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>

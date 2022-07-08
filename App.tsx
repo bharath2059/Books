@@ -25,6 +25,8 @@ export default function App() {
         <Stack.Screen name = "SignUp" component={CreateSignupPage}/>
         <Stack.Screen name = "Homepage" component={Homepage}/>
         <Stack.Screen name = "Forgotpasspage" component={Forgotpass}/>
+        <Stack.Screen name = "SearchList" component={Searchlist}/>
+        <Stack.Screen name = "Search" component={Search}/>
 
       </Stack.Navigator>
 

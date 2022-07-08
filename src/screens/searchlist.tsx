@@ -1,12 +1,12 @@
 import React from "react";
-import {View, Text, StyleSheet, SafeAreaView, Image, Platform} from "react-native";
+import {View, Text, StyleSheet, SafeAreaView, Image, Platform, TouchableOpacity} from "react-native";
 
 
-const Searchlist = () =>{
+const Searchlist = ({navigation}) =>{
     return(
         <SafeAreaView style = {styles.wrapper}>
             
-            <Text style ={styles.searchtext}> Did you Search for Study Coding</Text>
+            <Text style ={styles.searchtext} onPress={()=>{navigation.navigate('Search')}}>Go Back</Text>
             
             <View style = {styles.box2}>
                 <View style = {styles.ListStyle}>
@@ -33,6 +33,7 @@ const Searchlist = () =>{
                     <Text style = {styles.listTextStyle}>Description : Provides students a skill-building practice</Text>
                     <Text style = {styles.listTextStyle}>Price : 25 CAD</Text>  
                 </View>
+                
             </View>
             
         </SafeAreaView>
