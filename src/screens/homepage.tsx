@@ -1,9 +1,18 @@
 import React from "react";
 import {View, Text, StyleSheet, SafeAreaView, Image, Platform} from "react-native";
-
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Search from "./search";
+import Searchlist from "./searchlist";
+import CreateAdPage from "./createadpage";
+import { Entypo } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons'; 
+const Tabs = createBottomTabNavigator();
 
 const Homepage = () =>{
     return(
+        
         <SafeAreaView style = {styles.wrapper}>
             
             <View style = {styles.box1}>
@@ -35,28 +44,41 @@ const Homepage = () =>{
                     <Text style = {styles.listTextStyle}>Price : 25 CAD</Text>  
                 </View>
             </View>
-            <View style = {styles.box3}>
-                <View style = {styles.HomeLabelStyle}>
-                    <Text style ={styles.LabelTextStyle} onPress = {() => { alert!('Home')}}>Home</Text>
-                </View>
-                <View style = {styles.HomeLabelStyle}>
-                    <Text style = {styles.LabelTextStyle}>Search</Text>
-                </View>
-                <View style = {styles.HomeLabelStyle}>
-                    <Text style ={ styles.LabelTextStyle}>PostAd</Text>
-                </View>
-                <View style = {styles.HomeLabelStyle}>
-                    <Text style = {styles.LabelTextStyle}>Profile</Text>
-                </View>
-            </View>
         </SafeAreaView>
     )
 
 }
 
+const TabNavig = () =>{
+    return(
+    <Tabs.Navigator screenOptions={{headerShown : false}}>
+            <Tabs.Screen name = "route-main" component={Homepage}
+             options ={{
+                title : "Home",
+                tabBarIcon:()=>(<Entypo name="home" size={24} color="black" />)
+
+            }}/>
+            <Tabs.Screen name = "route-search" component={Search}
+             options ={{
+                title : "Search",
+                tabBarIcon: ()=>(<AntDesign name="search1" size={24} color="black" />)
+
+
+            }}/>
+            
+            < Tabs.Screen name = "route-createad" component={CreateAdPage}
+             options ={{
+                title : "PostAd",
+                tabBarIcon:()=>(<Ionicons name="ios-add-circle-outline" size={24} color="black" />)
+
+            }}/>
+
+        </Tabs.Navigator>
+)}
+
 const styles = StyleSheet.create({
     wrapper : {
-      // backgroundColor : '#DB95D5'
+      backgroundColor : '#E8E8FF',
       width : "100%",
       flex : 1   
     },
@@ -127,4 +149,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Homepage;
+export default TabNavig;
