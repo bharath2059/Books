@@ -34,7 +34,7 @@ const CreateLoginPage = ({navigation}) => {
                     <Text style={styles.buttonTextStyle}>Login</Text>
                 </TouchableOpacity>
                 <Text style={styles.link} onPress ={()=>{navigation.push('SignUp')}}>Don't have an account?</Text>
-                <Text style={styles.link1}>Forgot Pasword?</Text>
+                <Text style={styles.link1} onPress ={()=>{navigation.push('Forgotpasspage')}}>Forgot Pasword?</Text>
             </View>
         </SafeAreaView>
     )
