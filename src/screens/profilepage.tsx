@@ -7,10 +7,11 @@ const Profilepage = () => {
         <SafeAreaView style={styles.Wrapper}>
             <View style={styles.box1}>
                 <Text style={styles.HeadingText}>Profile</Text>
-                <Text style={styles.box2}>Username : Kartik Soni</Text>
-                <Text style={styles.box2}>Password : ********</Text>
-                <Text style={styles.box2}>Email : sonikartik@gmail.com</Text>
-
+                <View style={styles.box2}>
+                <Image style ={styles.imageStyle}source={require('./../Assets/profile.png')}/>
+                <Text style={styles.textStyle}>Username : Kartik Soni</Text>
+                <Text style={styles.textStyle}>Email : sonikartik@gmail.com</Text>
+                </View>
                 
                 <TouchableOpacity style={styles.buttonStyle}>
                     <Text style={styles.buttonTextStyle}>Edit</Text>
@@ -28,6 +29,7 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingTop: 80,
         backgroundColor: '#E8E8FF',
+      
     },
     HeadingText: {
         marginBottom:40,
@@ -38,13 +40,28 @@ const styles = StyleSheet.create({
     box2: {
     
         marginBottom : 0,
-        marginTop : 10,
-        marginLeft: 50,       
+        marginTop : 80,
+        marginLeft: 50,
+        alignItems : 'center'      
     },
 
     box1: {
         
-        flex: 3,
+       // flex: 3,
+    },
+    textStyle :{
+        fontSize : 20,
+
+
+    },
+    imageStyle: {
+        height: 200,
+        width: 200,
+       // left: 105,
+        marginBottom: 40,
+        alignItems:'center',
+        position : 'relative',
+        top : 20
     },
 
 
@@ -78,20 +95,22 @@ const styles = StyleSheet.create({
     buttonStyle1: {
         backgroundColor: '#F97777',
         height: 45,
-        width: 180,
+        width: "70%",
         marginBottom: 20,
-        marginLeft: 100,
+        //marginLeft: 100,
         borderRadius: 10,
         marginTop: 20,
+        alignSelf : 'center'
     },
     buttonStyle: {
         backgroundColor: '#F97777',
         height: 45,
-        width: 80,
+        width: "70%",
         marginBottom: 10,
-        marginLeft: 147,
+        //marginLeft: 147,
         borderRadius: 10,
         marginTop: 60,
+        alignSelf : 'center'
     },
     buttonTextStyle: {
         fontSize: 25,

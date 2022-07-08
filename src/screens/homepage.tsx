@@ -8,6 +8,8 @@ import CreateAdPage from "./createadpage";
 import { Entypo } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons'; 
+import { MaterialCommunityIcons } from '@expo/vector-icons'; 
+import Profilepage from "./profilepage";
 const Tabs = createBottomTabNavigator();
 
 const Homepage = () =>{
@@ -70,6 +72,13 @@ const TabNavig = () =>{
              options ={{
                 title : "PostAd",
                 tabBarIcon:()=>(<Ionicons name="ios-add-circle-outline" size={24} color="black" />)
+
+            }}/>
+
+            < Tabs.Screen name = "route-profile" component={Profilepage}
+             options ={{
+                title : "My Account",
+                tabBarIcon:()=>(<MaterialCommunityIcons name="face-man-profile" size={24} color="black" />)
 
             }}/>
 

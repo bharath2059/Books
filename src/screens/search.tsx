@@ -4,7 +4,7 @@ import { SafeAreaView, StyleSheet, Text, View, TextInput, TouchableOpacity, Aler
 
 
 
-const Search = () =>{
+const Search = ({navigation}) =>{
     const [Title, setsearchbook] = useState('')
     return(
         <SafeAreaView style={styles.Wrapper}>
@@ -18,7 +18,7 @@ const Search = () =>{
             </View>
            
             <TouchableOpacity style={styles.buttonStyle}
-                onPress={() => { alert("Your book has been found"); } }>
+                onPress={() =>{navigation.navigate('SearchList')} }>
                 <Text style={styles.buttonTextStyle}>Search</Text>
             </TouchableOpacity> 
             </View> 
