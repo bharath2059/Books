@@ -5,10 +5,10 @@ import { SafeAreaView, StyleSheet, Text, View, TextInput, TouchableOpacity, Aler
 const Forgotpass = ({navigation}) => {
     const [Email, setEmail] = useState('')
     return (
-        <SafeAreaView style={styles.Wrapper}>
-            <View style={styles.box1}>
-                <Text style={styles.HeadingText}>Forgot Password</Text>
-
+            <View style = {styles.Wrapper}>
+                <View >
+                <Text style={styles.HeadingText}>Forgot Your Password</Text>
+                 </View>
                 <View style={styles.textInputStyle}>
                     <TextInput style={styles.InputTextStyle}
                         onChangeText={setEmail}
@@ -20,67 +20,38 @@ const Forgotpass = ({navigation}) => {
                     <Text style={styles.buttonTextStyle} onPress={()=>{navigation.navigate('LoginPage')}}>Send</Text>
                 </TouchableOpacity>
             </View>
-        </SafeAreaView>
+        
     )
 }
 
 const styles = StyleSheet.create({
+   
     Wrapper: {
-        flex: 1,
+        flex: 3,
+        alignItems : 'center',
+        //justifyContent : "center",
         paddingTop: 80,
         backgroundColor: '#E8E8FF',
+        width : "100%"
+    },
+    HeadingStyle : {
+
+       //marginBottom : 
+
     },
     HeadingText: {
-        fontSize: 40,
+        fontSize: 36,
         fontWeight: 'bold',
         textAlign: 'center'
     },
 
-    imageStyle: {
-        height: 200,
-        width: 200,
-        left: 105,
-        bottom: 40,
-        alignItems: 'center',
-    },
-
-    box1: {
-        flex: 3,
-    },
-
-    link: {
-        marginTop: 40,
-        fontSize: 20,
-        fontWeight: 'bold',
-        textAlign: 'center',
-        color: '#0b780e',
-    },
-    link1: {
-        marginTop: 10,
-        fontSize: 20,
-        fontWeight: 'bold',
-        textAlign: 'center',
-        color: '#0b780e',
-    },
-
-
     textInputStyle: {
         height: 40,
-        width: 250,
+        width: "90%",
         backgroundColor: '#D9D9D9',
         marginBottom: 0,
         marginTop: 80,
-        marginLeft: 80,
-        borderRadius: 10
-
-    },
-    textInputStyle1: {
-        height: 40,
-        width: 250,
-        backgroundColor: '#D9D9D9',
-        marginBottom: 0,
-        marginTop: 30,
-        marginLeft: 80,
+        //marginLeft: 80,
         borderRadius: 10
 
     },
@@ -88,15 +59,15 @@ const styles = StyleSheet.create({
         position: 'relative',
         top: 5,
         fontSize: 18,
-        marginLeft: 5,
+       // marginLeft: 5,
 
     },
     buttonStyle: {
         backgroundColor: '#F97777',
-        height: 35,
-        width: 80,
+        height: 50,
+        width: "70%",
         marginBottom: 20,
-        marginLeft: 150,
+        //marginLeft: 150,
         borderRadius: 10,
         marginTop: 60,
     },
@@ -105,6 +76,7 @@ const styles = StyleSheet.create({
         fontSize: 25,
         textAlign: 'center',
         position: 'relative',
+        top : 10
 
     },
 },
