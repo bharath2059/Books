@@ -12,11 +12,11 @@ const CreateLoginPage = ({navigation}) => {
     const [Password, setPassword] = useState('')
     return (
         <SafeAreaView style={styles.Wrapper}>
-
+            
             <Image source={require('./../Assets/logo.jpeg')} style={styles.imageStyle} />
             <View style={styles.box1}>
                 <Text style={styles.HeadingText}>Login</Text>
-                
+                <View style = {styles.i}>
                 <View style={styles.textInputStyle}>
                     <TextInput style={styles.InputTextStyle}
                         onChangeText={setEmail}
@@ -30,12 +30,14 @@ const CreateLoginPage = ({navigation}) => {
                         value={Password}
                         placeholder='Enter your Password' />
                 </View>
+                </View>
                 <TouchableOpacity style={styles.buttonStyle} onPress ={()=>{navigation.push('Homepage')}}>
                     <Text style={styles.buttonTextStyle}>Login</Text>
                 </TouchableOpacity>
                 <Text style={styles.link} onPress ={()=>{navigation.push('SignUp')}}>Don't have an account?</Text>
                 <Text style={styles.link1} onPress ={()=>{navigation.push('Forgotpasspage')}}>Forgot Pasword?</Text>
             </View>
+           
         </SafeAreaView>
     )
 }
@@ -43,7 +45,7 @@ const CreateLoginPage = ({navigation}) => {
 const styles = StyleSheet.create({
     Wrapper: {
         flex: 1,
-
+        alignItems : "center",
         paddingTop:170,
 
         
@@ -56,13 +58,16 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop : 40
     },
+    i : {
+        alignItems : "center"
+    },
 
 
     
     imageStyle: {
         height: 200,
-        width: 200,
-        left: 105,
+        width: "30%",
+       // left: 105,
         //bottom: 40,
         alignItems:'center',
         position : 'relative',
@@ -72,6 +77,7 @@ const styles = StyleSheet.create({
 
     box1: {
         flex: 3,
+        width : "100%"
     },
 
 
@@ -94,24 +100,24 @@ const styles = StyleSheet.create({
 
     textInputStyle: {
         height: 40,
-        width: 250,
+        width: "70%",
         backgroundColor: '#D9D9D9',
         marginBottom: 0,
 
         marginTop:30,
         
 
-        marginLeft:80,
+       // marginLeft:80,
         borderRadius:10
 
     },
     textInputStyle1: {
         height: 40,
-        width: 250,
+        width: "70%",
         backgroundColor: '#D9D9D9',
         marginBottom: 0,
         marginTop:30,
-        marginLeft:80,
+       // marginLeft:80,
         borderRadius:10
 
     },

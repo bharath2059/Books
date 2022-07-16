@@ -40,6 +40,8 @@ const styles = StyleSheet.create({
         height : "50%",
         width : "100%",
         flex : 3,
+        alignItems : "center",
+        justifyContent : "flex-start",
         //backgroundColor : '#586B87', 
        // marginRight : 10,
         marginBottom : 10,
@@ -49,7 +51,8 @@ const styles = StyleSheet.create({
     },
     textInputStyle :{
         height : 50,
-        width : 300,
+        width : "90%",
+        alignItems : 'center',
        // marginLeft : 185,
         backgroundColor : '#D9D9D9',
         marginBottom : 20
@@ -63,9 +66,10 @@ const styles = StyleSheet.create({
     buttonStyle : {
         backgroundColor : '#F97777',
         height : 65,
-        width : "70%",
+        width : "80%",
         alignSelf : 'center',
         marginBottom : 20,
+        borderRadius : 10,
         position : 'relative',
         top : 400
     },
@@ -83,31 +87,6 @@ const styles = StyleSheet.create({
         marginBottom : 20
         
     },
-    box3 : {
-        height :70,
-        width : '100%',
-        backgroundColor : '#595959',
-        flex : 0.3,
-        flexDirection : 'row',
-       // marginBottom : 20
-        
-        
-    },
-    HomeLabelStyle :{
-        width : "28%",
-        justifyContent : 'center'
-        
-    },
-    LabelTextStyle :{
-        fontSize : 20,
-        fontWeight : '300',
-        color : "#ffffff"  
-    },
-    imageStyle : {
-        height : 100,
-        Width : 300,
-        backgroundColor : '#D9D9D9',
-        marginBottom : 20
-    }
+    
 })
 export default Search;

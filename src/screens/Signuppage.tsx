@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { SafeAreaView, StyleSheet, Text, View, TextInput, TouchableOpacity, Alert } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View, TextInput, TouchableOpacity, Alert, Image } from 'react-native';
 
 const CreateSignupPage = ({navigation}) => {
     const [Name, setName] = useState('')
@@ -10,8 +10,9 @@ const CreateSignupPage = ({navigation}) => {
     return (
         <SafeAreaView style={styles.Wrapper}>
             <View style={styles.box1}>
+            <Image source={require('./../Assets/logo.jpeg')} style={styles.imageStyle} />
                 <Text style={styles.HeadingText}>SignUp</Text>
-
+               
                 <View style={styles.textInputStyle}>
                     <TextInput style={styles.InputTextStyle}
                         onChangeText={setName}
@@ -56,18 +57,19 @@ const CreateSignupPage = ({navigation}) => {
 const styles = StyleSheet.create({
     Wrapper: {
         flex: 1,
-        paddingTop:170,
+       // paddingTop:170,
         backgroundColor: '#E8E8FF',
     },
     HeadingText: {
         fontSize: 40,
+    
         fontWeight: 'bold',
         textAlign: 'center'
     },
 
     box1: {
         position : 'relative',
-        top : 80,
+       // top : 20,
         alignItems : 'center'
     },
     link:{
@@ -88,6 +90,16 @@ const styles = StyleSheet.create({
         position : 'relative',
         top : 40
     },
+    imageStyle: {
+        height: 200,
+        width: "30%",
+       // left: 105,
+        //bottom: 40,
+        alignItems:'center',
+        position : 'relative',
+        //top : 30
+    },
+
     /*textInputStyle2: {
         height: 40,
         width: 250,

@@ -13,9 +13,10 @@ const CreateAdPage = () =>{
     const [Contact, setContact] = useState('')
     return(
         <SafeAreaView style={styles.Wrapper}>
+            <View>
             < View style = {styles.box1}>
             <Text style = {styles.HeadingText}>Post Your ad</Text>
-            <View style = {styles.imageStyle}>
+            <View style = {styles.textInputStyle}>
                 <Text style ={styles.InputTextStyle} onPress ={()=>{alert('Select Photo')}}>Click Here to Add Image of the book</Text>
             </View>
             <View style={styles.textInputStyle}>
@@ -60,7 +61,7 @@ const CreateAdPage = () =>{
             </TouchableOpacity> 
             </View> 
             
-           
+            </View>
         </SafeAreaView>
     )
 }
@@ -70,16 +71,19 @@ const styles = StyleSheet.create({
         flex : 1,
         width : '100%',
         alignItems : 'center',
+        justifyContent : 'space-evenly',
         backgroundColor : '#E8E8FF',
-        marginTop : 20     
+        marginTop : 20,
+          
     },
     box1 : {
-        flex : 3
+        flex : 3,
+        justifyContent : 'space-evenly'
 
     },
     textInputStyle :{
         height : 50,
-        width : 300,
+        width : "100%",
         backgroundColor : '#D9D9D9',
         marginBottom : 20,
         borderRadius : 20
@@ -87,16 +91,17 @@ const styles = StyleSheet.create({
     InputTextStyle : {
         position : 'relative',
         top : 15,
-        fontSize : 20
+        fontSize : 20,
+        textAlign : "center"
 
     },
     buttonStyle : {
         backgroundColor : '#F97777',
-        height : 80,
-        width : 300,
+        height : 65,
+        width : "80%",
         alignSelf : 'center',
         marginBottom : 20,
-        borderRadius : 20,
+        borderRadius : 10,
         position : 'relative',
         right : 10
     },
@@ -112,25 +117,14 @@ const styles = StyleSheet.create({
         fontWeight : 'bold',
         textAlign : 'center'
     },
-    box3 : {
+   /* box3 : {
         height :70,
         width : '100%',
         backgroundColor : '#595959',
         flex : 0.3,
         flexDirection : 'row',
         
-        
-    },
-    HomeLabelStyle :{
-        width : "28%",
-        justifyContent : 'center'
-        
-    },
-    LabelTextStyle :{
-        fontSize : 20,
-        fontWeight : '300',
-        color : "#ffffff"  
-    },
+    },*/
     imageStyle : {
         height : 100,
         Width : 300,
