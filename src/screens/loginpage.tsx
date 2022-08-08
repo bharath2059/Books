@@ -40,6 +40,10 @@ const CreateLoginPage = ({ navigation, route }) => {
   const SignIn = () => {
     if (email === "bharath@gmail.com" && password === "password") {
       navigation.push("Homepage");
+    } else {
+      alert(
+        "Please enter following details,email : bharath@gmail.com, password : password"
+      );
     }
   };
   const refreshPage = () => {
