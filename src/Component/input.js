@@ -11,7 +11,7 @@ const Input = (props) => {
       setType("password");
     }
   };
-  console.log("inside input", config.name);
+
   return (
     <View style={styles.container}>
       <View style={[styles.inputContainer]}>
